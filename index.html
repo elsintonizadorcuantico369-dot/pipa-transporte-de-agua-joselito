@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caminhão Pipa Rio de Janeiro | Transporte de Água Joselito</title>
+    <meta name="description" content="Falta água no seu bairro? Caminhão pipa emergencial no Rio de Janeiro e região metropolitana. Atendimento rápido 24h.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --fundo: #08090C;
+            --azul: #1A6FD4;
+            --azul-claro: #4D9FFF;
+            --branco: #F2F4F8;
+            --cinza: #8892A4;
+            --amarelo: #F5C542;
+        }
+        
+        body {
+            font-family: 'Barlow', sans-serif;
+            background-color: var(--fundo);
+            color: var(--branco);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(8, 9, 12, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(77, 159, 255, 0.1);
+        }
+        
+        .navbar-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--branco);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .logo-destaque {
+            color: var(--azul-claro);
+        }
+        
+        .nav-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .hero {
+            margin-top: 80px;
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-dor {
+            font-size: 1rem;
+            color: var(--amarelo);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--branco);
+        }
+        
+        .hero-subtitulo {
+            font-size: 1.25rem;
+            color: var(--cinza);
+            margin-bottom: 2rem;
+            max-width: 700px;
+        }
+        
+        .proof-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid rgba(77, 159, 255, 0.2);
+            border-bottom: 1px solid rgba(77, 159, 255, 0.2);
+        }
+        
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .proof-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .proof-text {
+            font-size: 0.95rem;
+            color: var(--cinza);
+        }
+        
+        .proof-text strong {
+            display: block;
+            color: var(--branco);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .bairros-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .bairro-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(77, 159, 255, 0.1);
+            border: 1px solid rgba(77, 159, 255, 0.3);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--azul-claro);
+            font-weight: 500;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            font-family: 'Barlow Condensed', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(77, 159, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border-color: var(--azul-claro);
+            color: var(--azul-claro);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(77, 159, 255, 0.1);
+        }
+        
+        .section {
+            padding: 4rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--cinza);
+            font-size: 1.15rem;
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .dores-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .dor-card {
+            background: rgba(26, 111, 212, 0.05);
+            border: 1px solid rgba(77, 159, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .dor-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul-claro);
+            background: rgba(26, 111, 212, 0.1);
+        }
+        
+        .dor-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .dor-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--branco);
+        }
+        
+        .dor-card p {
+            color: var(--cinza);
+            line-height: 1.7;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .review-card {
+            background: rgba(26, 111, 212, 0.05);
+            border: 1px solid rgba(77, 159, 255, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .review-author {
+            flex: 1;
+        }
+        
+        .review-name {
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 0.25rem;
+        }
+        
+        .review-stars {
+            color: var(--amarelo);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        
+        .review-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: white;
+            color: #4285F4;
+            padding: 0.35rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        
+        .review-text {
+            color: var(--cinza);
+            line-height: 1.7;
+            font-style: italic;
+        }
+        
+        .como-funciona {
+            background: linear-gradient(180deg, rgba(26, 111, 212, 0.05) 0%, rgba(8, 9, 12, 0) 100%);
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step-card {
+            text-align: center;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .step-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: var(--branco);
+        }
+        
+        .step-card p {
+            color: var(--cinza);
+            line-height: 1.7;
+        }
+        
+        .cobertura-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        
+        .cobertura-tag {
+            padding: 0.75rem 1.5rem;
+            background: rgba(77, 159, 255, 0.1);
+            border: 1px solid rgba(77, 159, 255, 0.3);
+            border-radius: 50px;
+            font-size: 1rem;
+            color: var(--branco);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .cobertura-tag:hover {
+            background: rgba(77, 159, 255, 0.2);
+            border-color: var(--azul-claro);
+            transform: translateY(-2px);
+        }
+        
+        .mapa-container {
+            margin-top: 3rem;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 500px;
+            border: 2px solid rgba(77, 159, 255, 0.3);
+        }
+        
+        .mapa-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            filter: invert(90%) hue-rotate(180deg) saturate(0.7) brightness(0.85);
+        }
+        
+        .radar-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .radar-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid var(--azul-claro);
+            border-radius: 50%;
+            opacity: 0;
+            animation: radar-pulse 3s infinite;
+        }
+        
+        .radar-ring:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+        
+        .radar-ring:nth-child(2) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 1s;
+        }
+        
+        .radar-ring:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            animation-delay: 2s;
+        }
+        
+        .radar-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            background: var(--azul-claro);
+            border-radius: 50%;
+            box-shadow: 0 0 20px var(--azul-claro);
+        }
+        
+        @keyframes radar-pulse {
+            0% {
+                width: 80px;
+                height: 80px;
+                opacity: 1;
+            }
+            100% {
+                width: 300px;
+                height: 300px;
+                opacity: 0;
+            }
+        }
+        
+        .cta-final {
+            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
+            border-radius: 16px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .cta-final h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .cta-final p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 65px;
+            height: 65px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: white;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
+            z-index: 999;
+            cursor: pointer;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        
+        .footer {
+            background: rgba(26, 111, 212, 0.05);
+            border-top: 1px solid rgba(77, 159, 255, 0.2);
+            padding: 3rem 1.5rem 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-nome {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--branco);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-endereco {
+            color: var(--cinza);
+            margin-bottom: 2rem;
+        }
+        
+        .footer-dev {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(77, 159, 255, 0.1);
+            color: var(--cinza);
+            font-size: 0.9rem;
+        }
+        
+        .footer-dev a {
+            color: var(--azul-claro);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .nav-phone {
+                font-size: 0.95rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            .mapa-container {
+                height: 350px;
+            }
+            
+            .whatsapp-float {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 60px;
+                height: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <span class="logo-destaque">Água</span> Joselito
+            </div>
+            <a href="https://wa.me/5521999717766" class="nav-phone">
+                📞 (21) 99971-7766
+            </a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-dor">⚠️ Falta água no seu bairro?</div>
+        <h1>Caminhão Pipa com Entrega Rápida no Rio de Janeiro e Região Metropolitana</h1>
+        <p class="hero-subtitulo">Sua família ou empresa sem água? Atendemos com urgência todos os bairros do Rio e região. Água limpa e tratada direto no seu reservatório.</p>
+        
+        <div class="proof-bar reveal">
+            <div class="proof-item">
+                <div class="proof-icon">⭐</div>
+                <div class="proof-text">
+                    <strong>4.0 estrelas</strong>
+                    Google Avaliações
+                </div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-icon">🚚</div>
+                <div class="proof-text">
+                    <strong>Atendimento 24h</strong>
+                    Inclusive finais de semana
+                </div>
+            </div>
+            <div class="proof-item">
+                <div class="proof-icon">💧</div>
+                <div class="proof-text">
+                    <strong>Água Tratada</strong>
+                    Qualidade garantida
+                </div>
+            </div>
+        </div>
+
+        <div class="bairros-tags reveal">
+            <span class="bairro-tag">📍 Zona Norte</span>
+            <span class="bairro-tag">📍 Zona Oeste</span>
+            <span class="bairro-tag">📍 Zona Sul</span>
+            <span class="bairro-tag">📍 Baixada Fluminense</span>
+            <span class="bairro-tag">📍 Grande Rio</span>
+        </div>
+
+        <div class="hero-buttons reveal">
+            <a href="https://wa.me/5521999717766" class="btn btn-primary">
+                💬 Solicitar Agora
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=Transporte%20de%20%C3%81gua%20Joselito&query_place_id=ChIJqS836kF-mQARJkKBKcdFNrw" class="btn btn-secondary" target="_blank">
+                📍 Ver no Mapa
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title reveal">Sabemos Como é Frustrante Ficar Sem Água</h2>
+        <p class="section-subtitle reveal">Problemas no abastecimento, obras na rua, caixa d'água seca... não deixe sua rotina parar</p>
+        
+        <div class="dores-grid">
+            <div class="dor-card reveal">
+                <div class="dor-icon">🏠</div>
+                <h3>Casa Sem Água</h3>
+                <p>Não consegue lavar roupa, dar banho nas crianças ou cozinhar? Resolvemos isso em poucas horas com caminhão pipa completo.</p>
+            </div>
+            <div class="dor-card reveal">
+                <div class="dor-icon">🏢</div>
+                <h3>Empresa Parada</h3>
+                <p>Seu comércio, restaurante ou empresa não pode ficar sem água. Atendemos emergências comerciais com rapidez.</p>
+            </div>
+            <div class="dor-card reveal">
+                <div class="dor-icon">🏗️</div>
+                <h3>Obra Sem Abastecimento</h3>
+                <p>Obra começando e sem acesso à rede? Fornecemos água para construção, mistura de concreto e limpeza.</p>
+            </div>
+            <div class="dor-card reveal">
+                <div class="dor-icon">⚡</div>
+                <h3>Emergência Noturna</h3>
+                <p>Problemas de madrugada ou final de semana? Atendemos 24h por dia, todos os dias, inclusive feriados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title reveal">O Que Dizem Nossos Clientes</h2>
+        <p class="section-subtitle reveal">Centenas de famílias e empresas atendidas em todo o Rio de Janeiro</p>
+        
+        <div class="reviews-grid">
+            <div class="review-card reveal">
+                <div class="review-badge">
+                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
+                </div>
+                <div class="review-header">
+                    <div class="review-avatar">M</div>
+                    <div class="review-author">
+                        <div class="review-name">Maria Silva</div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">"Atendimento rápido e profissional. Fiquei sem água por causa de obra na rua e em 2 horas resolveram meu problema. Recomendo!"</p>
+            </div>
+            
+            <div class="review-card reveal">
+                <div class="review-badge">
+                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
+                </div>
+                <div class="review-header">
+                    <div class="review-avatar">J</div>
+                    <div class="review-author">
+                        <div class="review-name">João Pedro</div>
+                        <div class="review-stars">★★★★☆</div>
+                    </div>
+                </div>
+                <p class="review-text">"Precisei de água pra obra e o pessoal foi super atencioso. Preço justo e entregaram certinho."</p>
+            </div>
+            
+            <div class="review-card reveal">
+                <div class="review-badge">
+                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
+                </div>
+                <div class="review-header">
+                    <div class="review-avatar">A</div>
+                    <div class="review-author">
+                        <div class="review-name">Ana Carolina</div>
+                        <div class="review-stars">★★★★★</div>
+                    </div>
+                </div>
+                <p class="review-text">"Salvou meu final de semana! Caixa d'água vazia num domingo e eles vieram rápido. Água limpinha, super satisfeita."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section como-funciona">
+        <h2 class="section-title reveal">Como Funciona</h2>
+        <p class="section-subtitle reveal">Processo simples e transparente do início ao fim</p>
+        
+        <div class="steps-grid">
+            <div class="step-card reveal">
+                <div class="step-number">1</div>
+                <h3>Entre em Contato</h3>
+                <p>Chame no WhatsApp ou ligue. Informe seu endereço e a quantidade de água necessária.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">2</div>
+                <h3>Receba o Orçamento</h3>
+                <p>Enviamos na hora o valor exato, sem surpresas. Aceitamos PIX, dinheiro, cartão e transferência.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">3</div>
+                <h3>Agendamos a Entrega</h3>
+                <p>Combinamos o melhor horário para você. Atendimentos emergenciais em poucas horas.</p>
+            </div>
+            <div class="step-card reveal">
+                <div class="step-number">4</div>
+                <h3>Água no Reservatório</h3>
+                <p>Caminhão chega, abastece sua caixa d'água com toda segurança. Problema resolvido!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title reveal">Bairros Atendidos no Rio e Região</h2>
+        <p class="section-subtitle reveal">Cobertura completa em toda a cidade e municípios vizinhos</p>
+        
+        <div class="cobertura-tags reveal">
+            <span class="cobertura-tag">Tijuca</span>
+            <span class="cobertura-tag">Méier</span>
+            <span class="cobertura-tag">Jacarepaguá</span>
+            <span class="cobertura-tag">Barra da Tijuca</span>
+            <span class="cobertura-tag">Campo Grande</span>
+            <span class="cobertura-tag">Bangu</span>
+            <span class="cobertura-tag">Botafogo</span>
+            <span class="cobertura-tag">Copacabana</span>
+            <span class="cobertura-tag">Ipanema</span>
+            <span class="cobertura-tag">Centro</span>
+            <span class="cobertura-tag">São Cristóvão</span>
+            <span class="cobertura-tag">Penha</span>
+            <span class="cobertura-tag">Ilha do Governador</span>
+            <span class="cobertura-tag">Duque de Caxias</span>
+            <span class="cobertura-tag">Nova Iguaçu</span>
+            <span class="cobertura-tag">São João de Meriti</span>
+            <span class="cobertura-tag">Nilópolis</span>
+            <span class="cobertura-tag">Niterói</span>
+            <span class="cobertura-tag">São Gonçalo</span>
+            <span class="cobertura-tag">Belford Roxo</span>
+            <span class="cober
