@@ -3,811 +3,558 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caminhão Pipa Rio de Janeiro | Transporte de Água Joselito</title>
-    <meta name="description" content="Falta água no seu bairro? Caminhão pipa emergencial no Rio de Janeiro e região metropolitana. Atendimento rápido 24h.">
+    <title>Transporte de Água Joselito - Caminhão Pipa no Rio de Janeiro</title>
+    <meta name="description" content="Transporte de Água Joselito - Caminhão Pipa no Rio de Janeiro. Água potável de qualidade para sua casa, empresa ou obra. Atendimento rápido e eficiente em toda a região.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --dark-bg: #08090C;
+            --primary-blue: #1A6FD4;
+            --light-blue: #4D9FFF;
+            --white-text: #F2F4F8;
+            --star-yellow: #FFD700; /* Gold yellow for stars */
+            --font-barlow: 'Barlow', sans-serif;
+            --font-barlow-condensed: 'Barlow Condensed', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        :root {
-            --fundo: #08090C;
-            --azul: #1A6FD4;
-            --azul-claro: #4D9FFF;
-            --branco: #F2F4F8;
-            --cinza: #8892A4;
-            --amarelo: #F5C542;
-        }
-        
+
         body {
-            font-family: 'Barlow', sans-serif;
-            background-color: var(--fundo);
-            color: var(--branco);
+            font-family: var(--font-barlow);
+            color: var(--white-text);
+            background-color: var(--dark-bg);
             line-height: 1.6;
-            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        
-        h1, h2, h3 {
-            font-family: 'Barlow Condensed', sans-serif;
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-barlow-condensed);
             font-weight: 700;
-            line-height: 1.1;
+            color: var(--white-text);
         }
-        
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(8, 9, 12, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            border-bottom: 1px solid rgba(77, 159, 255, 0.1);
+
+        a {
+            text-decoration: none;
+            color: var(--primary-blue);
         }
-        
-        .navbar-content {
+
+        .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 1rem 1.5rem;
+            padding: 0 1.5rem;
+        }
+
+        /* Header / Navbar */
+        .header {
+            background-color: var(--dark-bg);
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(242, 244, 248, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.5rem;
+            font-family: var(--font-barlow-condensed);
+            font-size: 1.8rem;
             font-weight: 700;
-            color: var(--branco);
+            color: var(--white-text);
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
-        
-        .logo-destaque {
-            color: var(--azul-claro);
+
+        .navbar-contact {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
-        
-        .nav-phone {
+
+        .navbar-contact a {
+            color: var(--white-text);
+            font-size: 1.1rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--azul-claro);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        
-        .hero {
-            margin-top: 80px;
-            padding: 3rem 1.5rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+
+        .navbar-contact a:hover {
+            background-color: var(--primary-blue);
         }
-        
-        .hero-dor {
-            font-size: 1rem;
-            color: var(--amarelo);
-            font-weight: 600;
+
+        .navbar-contact .whatsapp-icon {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            fill: var(--white-text);
+        }
+
+        /* Sections General */
+        section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        section:nth-of-type(even) {
+            background-color: #1a1c22; /* Slightly lighter dark for contrast */
+        }
+
+        .section-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 1rem;
         }
-        
-        .hero h1 {
-            font-size: 2.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--branco);
-        }
-        
-        .hero-subtitulo {
-            font-size: 1.25rem;
-            color: var(--cinza);
-            margin-bottom: 2rem;
-            max-width: 700px;
-        }
-        
-        .proof-bar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem 0;
-            border-top: 1px solid rgba(77, 159, 255, 0.2);
-            border-bottom: 1px solid rgba(77, 159, 255, 0.2);
-        }
-        
-        .proof-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .proof-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        .section-subtitle {
             font-size: 1.5rem;
+            color: var(--light-blue);
+            margin-bottom: 3rem;
         }
-        
-        .proof-text {
-            font-size: 0.95rem;
-            color: var(--cinza);
-        }
-        
-        .proof-text strong {
-            display: block;
-            color: var(--branco);
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .bairros-tags {
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(8, 9, 12, 0.8), rgba(8, 9, 12, 0.8)), url('https://via.placeholder.com/1920x800/08090C/F2F4F8?text=Caminhao+Pipa+Joselito') no-repeat center center/cover; /* Placeholder image */
+            padding: 8rem 0;
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
-        
-        .bairro-tag {
-            padding: 0.5rem 1rem;
-            background: rgba(77, 159, 255, 0.1);
-            border: 1px solid rgba(77, 159, 255, 0.3);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--azul-claro);
-            font-weight: 500;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        
-        .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            font-family: 'Barlow Condensed', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            min-height: 80vh;
+            text-align: center;
         }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(77, 159, 255, 0.3);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            border-color: var(--azul-claro);
-            color: var(--azul-claro);
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(77, 159, 255, 0.1);
-        }
-        
-        .section {
-            padding: 4rem 1.5rem;
-            max-width: 1200px;
+
+        .hero-content {
+            max-width: 900px;
             margin: 0 auto;
         }
-        
-        .section-title {
-            font-size: 2.5rem;
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: var(--white-text);
             margin-bottom: 1rem;
-            text-align: center;
+            line-height: 1.1;
+            text-transform: uppercase;
         }
-        
-        .section-subtitle {
-            text-align: center;
-            color: var(--cinza);
-            font-size: 1.15rem;
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--white-text);
+            margin-bottom: 2rem;
         }
-        
-        .dores-grid {
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-blue);
+            color: var(--white-text);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 15px rgba(26, 111, 212, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--light-blue);
+            transform: translateY(-3px);
+        }
+
+        /* Dor Section */
+        .pain-points-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
-        .dor-card {
-            background: rgba(26, 111, 212, 0.05);
-            border: 1px solid rgba(77, 159, 255, 0.2);
-            border-radius: 12px;
+
+        .pain-point-item {
+            background-color: #1a1c22;
             padding: 2rem;
-            transition: all 0.3s ease;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border: 1px solid rgba(242, 244, 248, 0.1);
         }
-        
-        .dor-card:hover {
+
+        .pain-point-item:hover {
             transform: translateY(-5px);
-            border-color: var(--azul-claro);
-            background: rgba(26, 111, 212, 0.1);
+            background-color: #22252b;
         }
-        
-        .dor-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+
+        .pain-point-item h3 {
+            font-size: 1.8rem;
+            color: var(--light-blue);
+            margin-bottom: 1rem;
         }
-        
-        .dor-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--branco);
+
+        .pain-point-item p {
+            font-size: 1.1rem;
+            color: var(--white-text);
         }
-        
-        .dor-card p {
-            color: var(--cinza);
-            line-height: 1.7;
+
+        /* Como Funciona Section */
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
-        
+
+        .how-it-works-step {
+            background-color: var(--dark-bg);
+            padding: 2.5rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--primary-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .how-it-works-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(26, 111, 212, 0.3);
+        }
+
+        .how-it-works-step .step-number {
+            font-family: var(--font-barlow-condensed);
+            font-size: 3.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .how-it-works-step h3 {
+            font-size: 1.8rem;
+            color: var(--white-text);
+            margin-bottom: 0.8rem;
+        }
+
+        .how-it-works-step p {
+            font-size: 1.1rem;
+            color: var(--white-text);
+        }
+
+        /* Reviews Section */
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
-        
+
         .review-card {
-            background: rgba(26, 111, 212, 0.05);
-            border: 1px solid rgba(77, 159, 255, 0.2);
-            border-radius: 12px;
+            background-color: var(--dark-bg);
             padding: 2rem;
-            position: relative;
-        }
-        
-        .review-header {
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(242, 244, 248, 0.1);
             display: flex;
-            align-items: center;
-            gap: 1rem;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-card .stars {
+            color: var(--star-yellow);
+            font-size: 1.5rem;
             margin-bottom: 1rem;
         }
-        
-        .review-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: white;
-        }
-        
-        .review-author {
-            flex: 1;
-        }
-        
-        .review-name {
-            font-weight: 700;
-            color: var(--branco);
-            margin-bottom: 0.25rem;
-        }
-        
-        .review-stars {
-            color: var(--amarelo);
+
+        .review-card p {
             font-size: 1.1rem;
-            letter-spacing: 2px;
+            color: var(--white-text);
+            margin-bottom: 1rem;
+            flex-grow: 1;
         }
-        
-        .review-badge {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: white;
-            color: #4285F4;
-            padding: 0.35rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
+
+        .review-card .reviewer-name {
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 0.35rem;
+            color: var(--light-blue);
+            font-size: 1.1rem;
         }
-        
-        .review-text {
-            color: var(--cinza);
-            line-height: 1.7;
-            font-style: italic;
-        }
-        
-        .como-funciona {
-            background: linear-gradient(180deg, rgba(26, 111, 212, 0.05) 0%, rgba(8, 9, 12, 0) 100%);
-        }
-        
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        
-        .step-card {
-            text-align: center;
-            position: relative;
-        }
-        
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: 700;
-            margin: 0 auto 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .step-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.75rem;
-            color: var(--branco);
-        }
-        
-        .step-card p {
-            color: var(--cinza);
-            line-height: 1.7;
-        }
-        
-        .cobertura-tags {
+
+        /* Bairros Atendidos Section */
+        .neighborhoods-list {
+            list-style: none;
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
             justify-content: center;
+            gap: 1rem;
             margin-top: 3rem;
         }
-        
-        .cobertura-tag {
-            padding: 0.75rem 1.5rem;
-            background: rgba(77, 159, 255, 0.1);
-            border: 1px solid rgba(77, 159, 255, 0.3);
-            border-radius: 50px;
-            font-size: 1rem;
-            color: var(--branco);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
+
+        .neighborhoods-list li {
+            background-color: var(--primary-blue);
+            color: var(--white-text);
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
         }
-        
-        .cobertura-tag:hover {
-            background: rgba(77, 159, 255, 0.2);
-            border-color: var(--azul-claro);
-            transform: translateY(-2px);
+
+        .neighborhoods-list li:hover {
+            background-color: var(--light-blue);
         }
-        
-        .mapa-container {
-            margin-top: 3rem;
-            position: relative;
-            border-radius: 16px;
-            overflow: hidden;
+
+        /* Map Section */
+        .map-container {
+            width: 100%;
             height: 500px;
-            border: 2px solid rgba(77, 159, 255, 0.3);
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         }
-        
-        .mapa-container iframe {
+
+        .map-container iframe {
             width: 100%;
             height: 100%;
-            border: none;
+            border: 0;
             filter: invert(90%) hue-rotate(180deg) saturate(0.7) brightness(0.85);
         }
-        
-        .radar-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 10;
-        }
-        
-        .radar-ring {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border: 2px solid var(--azul-claro);
-            border-radius: 50%;
-            opacity: 1;
-            animation: radar-pulse 3s infinite;
-        }
-        
-        .radar-ring:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            animation-delay: 0s;
-        }
-        
-        .radar-ring:nth-child(2) {
-            width: 80px;
-            height: 80px;
-            animation-delay: 1s;
-        }
-        
-        .radar-ring:nth-child(3) {
-            width: 80px;
-            height: 80px;
-            animation-delay: 2s;
-        }
-        
-        .radar-center {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
-            background: var(--azul-claro);
-            border-radius: 50%;
-            box-shadow: 0 0 20px var(--azul-claro);
-        }
-        
-        @keyframes radar-pulse {
-            0% {
-                width: 80px;
-                height: 80px;
-                opacity: 1;
-            }
-            100% {
-                width: 300px;
-                height: 300px;
-                opacity: 1;
-            }
-        }
-        
+
+        /* CTA Final Section */
         .cta-final {
-            background: linear-gradient(135deg, var(--azul), var(--azul-claro));
-            border-radius: 16px;
-            padding: 4rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
+            background-color: var(--primary-blue);
+            padding: 5rem 0;
         }
-        
+
         .cta-final h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
+            color: var(--white-text);
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
-        
+
         .cta-final p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            color: var(--white-text);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
+
+        .payment-methods {
+            margin-top: 2rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white-text);
+        }
+
+        /* Floating WhatsApp Button */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            width: 65px;
-            height: 65px;
-            background: #25D366;
+            background-color: #25D366; /* WhatsApp green */
+            color: var(--white-text);
             border-radius: 50%;
+            width: 60px;
+            height: 60px;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             font-size: 2rem;
-            color: white;
-            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.5);
-            z-index: 999;
-            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
             animation: pulse 2s infinite;
-            text-decoration: none;
         }
-        
+
+        .whatsapp-float:hover {
+            background-color: #1DA851;
+        }
+
+        .whatsapp-float svg {
+            fill: var(--white-text);
+            width: 30px;
+            height: 30px;
+        }
+
         @keyframes pulse {
-            0%, 100% {
+            0% {
                 transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
             }
-            50% {
-                transform: scale(1.1);
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
-        
+
+        /* Footer */
         .footer {
-            background: rgba(26, 111, 212, 0.05);
-            border-top: 1px solid rgba(77, 159, 255, 0.2);
-            padding: 3rem 1.5rem 1.5rem;
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
+            background-color: var(--dark-bg);
+            padding: 2rem 0;
             text-align: center;
-        }
-        
-        .footer-nome {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--branco);
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-endereco {
-            color: var(--cinza);
-            margin-bottom: 2rem;
-        }
-        
-        .footer-dev {
-            padding-top: 2rem;
-            border-top: 1px solid rgba(77, 159, 255, 0.1);
-            color: var(--cinza);
+            border-top: 1px solid rgba(242, 244, 248, 0.1);
             font-size: 0.9rem;
+            color: rgba(242, 244, 248, 0.7);
         }
-        
-        .footer-dev a {
-            color: var(--azul-claro);
-            text-decoration: none;
-            font-weight: 600;
+
+        .footer p {
+            margin: 0;
         }
-        
-        .reveal {
-            opacity: 1;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
+
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
             }
-            
+
+            .navbar-contact {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .section-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .cta-final h2 {
+                font-size: 2.5rem;
+            }
+
+            .cta-final p {
+                font-size: 1.1rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+
+            .whatsapp-float svg {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .btn-primary {
+                padding: 0.8rem 1.8rem;
+                font-size: 1.1rem;
+            }
+
             .section-title {
                 font-size: 2rem;
             }
-            
-            .nav-phone {
-                font-size: 0.95rem;
+
+            .section-subtitle {
+                font-size: 1rem;
             }
-            
-            .logo {
-                font-size: 1.2rem;
+
+            .pain-point-item, .how-it-works-step, .review-card {
+                padding: 1.5rem;
             }
-            
-            .mapa-container {
-                height: 350px;
+
+            .pain-point-item h3, .how-it-works-step h3 {
+                font-size: 1.5rem;
             }
-            
-            .whatsapp-float {
-                bottom: 1.5rem;
-                right: 1.5rem;
-                width: 60px;
-                height: 60px;
+
+            .how-it-works-step .step-number {
+                font-size: 3rem;
+            }
+
+            .cta-final h2 {
+                font-size: 2rem;
+            }
+
+            .cta-final p {
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="logo">
-                <span class="logo-destaque">Água</span> Joselito
-            </div>
-            <a href="https://wa.me/5521999717766" class="nav-phone">
-                📞 (21) 99971-7766
-            </a>
-        </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-dor">⚠️ Falta água no seu bairro?</div>
-        <h1>Caminhão Pipa com Entrega Rápida no Rio de Janeiro e Região Metropolitana</h1>
-        <p class="hero-subtitulo">Sua família ou empresa sem água? Atendemos com urgência todos os bairros do Rio e região. Água limpa e tratada direto no seu reservatório.</p>
-        
-        <div class="proof-bar reveal">
-            <div class="proof-item">
-                <div class="proof-icon">⭐</div>
-                <div class="proof-text">
-                    <strong>4.0 estrelas</strong>
-                    Google Avaliações
-                </div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-icon">🚚</div>
-                <div class="proof-text">
-                    <strong>Atendimento 24h</strong>
-                    Inclusive finais de semana
-                </div>
-            </div>
-            <div class="proof-item">
-                <div class="proof-icon">💧</div>
-                <div class="proof-text">
-                    <strong>Água Tratada</strong>
-                    Qualidade garantida
-                </div>
+    <header class="header">
+        <div class="container navbar">
+            <a href="https://wa.me/5521999717766" class="logo">Transporte de Água Joselito</a>
+            <div class="navbar-contact">
+                <a href="https://wa.me/5521999717766" target="_blank" rel="noopener noreferrer">
+                    <svg class="whatsapp-icon" viewBox="0 0 24 24">
+                        <path d="M12.04 2C7.34 2 3.56 5.78 3.56 10.48C3.56 12.9 4.54 15.11 6.13 16.8L5 21.04L9.36 19.91C11.5 20.65 13.78 20.35 15.65 19.19C19.34 16.89 20.32 12.04 18.02 8.35C16.86 6.48 14.65 5.5 12.24 5.5C9.83 5.5 7.62 6.48 6.46 8.35C5.29 10.22 5.59 12.5 6.33 14.64L7.46 13.51C6.9 12.07 6.8 10.48 7.26 8.94C7.72 7.4 8.7 6.32 10.03 5.86C11.36 5.4 12.8 5.7 14.07 6.56C15.34 7.42 16.14 8.79 16.24 10.23C16.34 11.67 15.88 13.06 14.92 14.02C13.96 14.98 12.57 15.44 11.13 15.34C9.69 15.24 8.32 14.44 7.46 13.17L6.33 14.3C7.46 16.17 9.69 17.15 12.04 17.15C14.48 17.15 16.7 16.17 17.86 14.3C19.02 12.43 18.72 10.15 17.98 8.01L19.11 6.88C20.24 5.01 20.54 2.73 19.8 0.59L18.67 1.72C17.5 3.59 15.29 4.57 12.94 4.57C10.59 4.57 8.38 3.59 7.22 1.72L6.09 2.85C4.92 4.72 4.62 7 5.36 9.14L6.49 8.01C5.93 9.45 5.83 11.04 6.29 12.58C6.75 14.12 7.73 15.2 9.06 15.66C10.39 16.12 11.83 15.82 13.1 14.96C14.37 14.1 15.17 12.73 15.27 11.29C15.37 9.85 14.91 8.46 13.95 7.5L12.04 2Z" fill="white"/>
+                        <path d="M12.04 2C7.34 2 3.56 5.78 3.56 10.48C3.56 12.9 4.54 15.11 6.13 16.8L5 21.04L9.36 19.91C11.5 20.65 13.78 20.35 15.65 19.19C19.34 16.89 20.32 12.04 18.02 8.35C16.86 6.48 14.65 5.5 12.24 5.5C9.83 5.5 7.62 6.48 6.46 8.35C5.29 10.22 5.59 12.5 6.33 14.64L7.46 13.51C6.9 12.07 6.8 10.48 7.26 8.94C7.72 7.4 8.7 6.32 10.03 5.86C11.36 5.4 12.8 5.7 14.07 6.56C15.34 7.42 16.14 8.79 16.24 10.23C16.34 11.67 15.88 13.06 14.92 14.02C13.96 14.98 12.57 15.44 11.13 15.34C9.69 15.24 8.32 14.44 7.46 13.17L6.33 14.3C7.46 16.17 9.69 17.15 12.04 17.15C14.48 17.15 16.7 16.17 17.86 14.3C19.02 12.43 18.72 10.15 17.98 8.01L19.11 6.88C20.24 5.01 20.54 2.73 19.8 0.59L18.67 1.72C17.5 3.59 15.29 4.57 12.94 4.57C10.59 4.57 8.38 3.59 7.22 1.72L6.09 2.85C4.92 4.72 4.62 7 5.36 9.14L6.49 8.01C5.93 9.45 5.83 11.04 6.29 12.58C6.75 14.12 7.73 15.2 9.06 15.66C10.39 16.12 11.83 15.82 13.1 14.96C14.37 14.1 15.17 12.73 15.27 11.29C15.37 9.85 14.91 8.46 13.95 7.5L12.04 2Z" fill="white"/>
+                    </svg>
+                    <span>+55 21 99971-7766</span>
+                </a>
             </div>
         </div>
+    </header>
 
-        <div class="bairros-tags reveal">
-            <span class="bairro-tag">📍 Zona Norte</span>
-            <span class="bairro-tag">📍 Zona Oeste</span>
-            <span class="bairro-tag">📍 Zona Sul</span>
-            <span class="bairro-tag">📍 Baixada Fluminense</span>
-            <span class="bairro-tag">📍 Grande Rio</span>
-        </div>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Fique sem água? Sua obra parou?</h1>
+                <p>Não deixe a falta de água atrapalhar sua rotina ou seus projetos no Rio de Janeiro e região. O Transporte de Água Joselito tem a solução rápida e confiável que você precisa!</p>
+                <a href="https://wa.me/5521999717766" target="_blank" rel="noopener noreferrer" class="btn-primary">Peça seu caminhão pipa agora!</a>
+            </div>
+        </section>
 
-        <div class="hero-buttons reveal">
-            <a href="https://wa.me/5521999717766" class="btn btn-primary">
-                💬 Solicitar Agora
-            </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Transporte%20de%20%C3%81gua%20Joselito&query_place_id=ChIJqS836kF-mQARJkKBKcdFNrw" class="btn btn-secondary" target="_blank">
-                📍 Ver no Mapa
-            </a>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title reveal">Sabemos Como é Frustrante Ficar Sem Água</h2>
-        <p class="section-subtitle reveal">Problemas no abastecimento, obras na rua, caixa d'água seca... não deixe sua rotina parar</p>
-        
-        <div class="dores-grid">
-            <div class="dor-card reveal">
-                <div class="dor-icon">🏠</div>
-                <h3>Casa Sem Água</h3>
-                <p>Não consegue lavar roupa, dar banho nas crianças ou cozinhar? Resolvemos isso em poucas horas com caminhão pipa completo.</p>
-            </div>
-            <div class="dor-card reveal">
-                <div class="dor-icon">🏢</div>
-                <h3>Empresa Parada</h3>
-                <p>Seu comércio, restaurante ou empresa não pode ficar sem água. Atendemos emergências comerciais com rapidez.</p>
-            </div>
-            <div class="dor-card reveal">
-                <div class="dor-icon">🏗️</div>
-                <h3>Obra Sem Abastecimento</h3>
-                <p>Obra começando e sem acesso à rede? Fornecemos água para construção, mistura de concreto e limpeza.</p>
-            </div>
-            <div class="dor-card reveal">
-                <div class="dor-icon">⚡</div>
-                <h3>Emergência Noturna</h3>
-                <p>Problemas de madrugada ou final de semana? Atendemos 24h por dia, todos os dias, inclusive feriados.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title reveal">O Que Dizem Nossos Clientes</h2>
-        <p class="section-subtitle reveal">Centenas de famílias e empresas atendidas em todo o Rio de Janeiro</p>
-        
-        <div class="reviews-grid">
-            <div class="review-card reveal">
-                <div class="review-badge">
-                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
-                </div>
-                <div class="review-header">
-                    <div class="review-avatar">M</div>
-                    <div class="review-author">
-                        <div class="review-name">Maria Silva</div>
-                        <div class="review-stars">★★★★★</div>
+        <section id="dores">
+            <div class="container">
+                <h2 class="section-title">Quem fica sem água sofre!</h2>
+                <p class="section-subtitle">A falta de água potável pode causar grandes transtornos. Nós entendemos sua dor e estamos aqui para resolver!</p>
+                <div class="pain-points-grid">
+                    <div class="pain-point-item">
+                        <h3>Rotina Interrompida</h3>
+                        <p>Imagine não poder tomar banho, lavar louça ou usar o banheiro. A falta de água paralisa sua casa e sua vida.</p>
                     </div>
-                </div>
-                <p class="review-text">"Atendimento rápido e profissional. Fiquei sem água por causa de obra na rua e em 2 horas resolveram meu problema. Recomendo!"</p>
-            </div>
-            
-            <div class="review-card reveal">
-                <div class="review-badge">
-                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
-                </div>
-                <div class="review-header">
-                    <div class="review-avatar">J</div>
-                    <div class="review-author">
-                        <div class="review-name">João Pedro</div>
-                        <div class="review-stars">★★★★☆</div>
+                    <div class="pain-point-item">
+                        <h3>Prejuízos na Obra</h3>
+                        <p>Uma obra sem água é uma obra parada. Atrasos significam custos extras e prazos perdidos, impactando seu orçamento.</p>
                     </div>
-                </div>
-                <p class="review-text">"Precisei de água pra obra e o pessoal foi super atencioso. Preço justo e entregaram certinho."</p>
-            </div>
-            
-            <div class="review-card reveal">
-                <div class="review-badge">
-                    <span style="color: #4285F4; font-weight: bold;">G</span> Google
-                </div>
-                <div class="review-header">
-                    <div class="review-avatar">A</div>
-                    <div class="review-author">
-                        <div class="review-name">Ana Carolina</div>
-                        <div class="review-stars">★★★★★</div>
+                    <div class="pain-point-item">
+                        <h3>Impacto na Empresa</h3>
+                        <p>Seu negócio depende de água para funcionar? Sem ela, a produção para, os serviços são interrompidos e clientes são perdidos.</p>
                     </div>
-                </div>
-                <p class="review-text">"Salvou meu final de semana! Caixa d'água vazia num domingo e eles vieram rápido. Água limpinha, super satisfeita."</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section como-funciona">
-        <h2 class="section-title reveal">Como Funciona</h2>
-        <p class="section-subtitle reveal">Processo simples e transparente do início ao fim</p>
-        
-        <div class="steps-grid">
-            <div class="step-card reveal">
-                <div class="step-number">1</div>
-                <h3>Entre em Contato</h3>
-                <p>Chame no WhatsApp ou ligue. Informe seu endereço e a quantidade de água necessária.</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-number">2</div>
-                <h3>Receba o Orçamento</h3>
-                <p>Enviamos na hora o valor exato, sem surpresas. Aceitamos PIX, dinheiro, cartão e transferência.</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-number">3</div>
-                <h3>Agendamos a Entrega</h3>
-                <p>Combinamos o melhor horário para você. Atendimentos emergenciais em poucas horas.</p>
-            </div>
-            <div class="step-card reveal">
-                <div class="step-number">4</div>
-                <h3>Água no Reservatório</h3>
-                <p>Caminhão chega, abastece sua caixa d'água com toda segurança. Problema resolvido!</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <h2 class="section-title reveal">Bairros Atendidos no Rio e Região</h2>
-        <p class="section-subtitle reveal">Cobertura completa em toda a cidade e municípios vizinhos</p>
-        
-        <div class="cobertura-tags reveal">
-            <span class="cobertura-tag">Tijuca</span>
-            <span class="cobertura-tag">Méier</span>
-            <span class="cobertura-tag">Jacarepaguá</span>
-            <span class="cobertura-tag">Barra da Tijuca</span>
-            <span class="cobertura-tag">Campo Grande</span>
-            <span class="cobertura-tag">Bangu</span>
-            <span class="cobertura-tag">Botafogo</span>
-            <span class="cobertura-tag">Copacabana</span>
-            <span class="cobertura-tag">Ipanema</span>
-            <span class="cobertura-tag">Centro</span>
-            <span class="cobertura-tag">São Cristóvão</span>
-            <span class="cobertura-tag">Penha</span>
-            <span class="cobertura-tag">Ilha do Governador</span>
-            <span class="cobertura-tag">Duque de Caxias</span>
-            <span class="cobertura-tag">Nova Iguaçu</span>
-            <span class="cobertura-tag">São João de Meriti</span>
-            <span class="cobertura-tag">Nilópolis</span>
-            <span class="cobertura-tag">Niterói</span>
-            <span class="cobertura-tag">São Gonçalo</span>
-            <span class="cobertura-tag">Belford Roxo</span>
-            <span class="cober
+                    <div class="pain-point-item">
+                        <h3>Saúde e Higiene</h3>
+                        <p>A falta de água compromete a higiene básica, aumentando o risco de doenças e afetando o bem-estar de todos.</p>
+                    </div>
+</body>
+</html>
